@@ -1,6 +1,6 @@
-import React, { useState  } from 'react'
+import React, { useState } from 'react'
 import { View, TextInput, StyleSheet, Dimensions } from 'react-native';
-import { EvilIcons } from '@expo/vector-icons'; 
+import { EvilIcons } from '@expo/vector-icons';
 
 export default function Search({ fetchWeatherData }) {
 
@@ -8,12 +8,12 @@ export default function Search({ fetchWeatherData }) {
 
     return (
         <View style={styles.searchBar}>
-            <TextInput 
-                placeholder='Enter City Name or Zip Code'
+            <TextInput
+                placeholder='Şehir İsmi Giriniz'
                 value={cityName}
                 onChangeText={(text) => setCityName(text)}
             />
-            <EvilIcons name="search" size={28} color="black"  onPress={() => fetchWeatherData(cityName)}/>
+            <EvilIcons name="search" size={28} color="black" onPress={() => fetchWeatherData(cityName)} />
         </View>
     )
 }
